@@ -122,37 +122,29 @@ var Floaty = React.createClass({
       time: this.state.time + 6
     });
 
-    if(this.state.time > 95 && this.state.time <= 220 && !this.state.vibrating) {
+    if(this.state.time > 95 && this.state.time <= 220 && !this.state.vibrating)
       this.setState({
         className: 'floaty vibrate',
         vibrating: true
       });
-      console.log('vibrating 1')
-    }
-    else if(this.state.time > 220 && this.state.time <= 278 && this.state.vibrating) {
+    else if(this.state.time > 220 && this.state.time <= 258 && this.state.vibrating)
       this.setState({
         className: 'floaty pulse',
         vibrating: false
       });
-      console.log('pulsing 1')
-    }
-    else if(this.state.time > 258 && this.state.time <= 380 && !this.state.vibrating) {
+    else if(this.state.time > 258 && this.state.time <= 380 && !this.state.vibrating)
       this.setState({
         className: 'floaty vibrate',
         vibrating: true
       });
-      console.log('vibrating 2')
-    }
-    else if(this.state.time > 380 && this.state.vibrating) {
+    else if(this.state.time > 380 && this.state.vibrating)
       this.setState({
         className: 'floaty pulse',
         vibrating: false
       });
-      console.log('pulsing 2')
-    }
   },
   componentDidMount: function() {
-    this.setInterval(this.tick, 60);
+    this.setInterval(this.tick, 6000);
   },
   render: function () {
     return(
