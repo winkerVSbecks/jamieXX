@@ -127,17 +127,17 @@ var Floaty = React.createClass({
         className: 'floaty vibrate',
         vibrating: true
       });
-    else if(this.state.time > 220 && this.state.time <= 258 && this.state.vibrating)
+    else if(this.state.time > 220 && this.state.time <= 252 && this.state.vibrating)
       this.setState({
         className: 'floaty pulse',
         vibrating: false
       });
-    else if(this.state.time > 258 && this.state.time <= 380 && !this.state.vibrating)
+    else if(this.state.time > 252 && this.state.time <= 378 && !this.state.vibrating)
       this.setState({
         className: 'floaty vibrate',
         vibrating: true
       });
-    else if(this.state.time > 380 && this.state.vibrating)
+    else if(this.state.time > 378 && this.state.vibrating)
       this.setState({
         className: 'floaty pulse',
         vibrating: false
@@ -162,8 +162,7 @@ var Rdio = React.createClass({
   },
   render: function () {
     return(
-      <div></div>
-      // <iframe width="400" height="36" src="https://rd.io/i/QVggWjfKlhY" frameborder="0" className="rdio"></iframe>
+      <iframe width="400" height="36" src="https://rd.io/i/QVggWjfKlhY" frameborder="0" className="rdio"></iframe>
     );
   }
 });
