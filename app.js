@@ -114,25 +114,28 @@ var Floaty = React.createClass({
     }
   },
   tick: function() {
-    this.setState({
-      style: {
-        left: getRandom(this.state.size.w*0.25, this.state.size.w*0.75) + 'px',
-        top: getRandom(this.state.size.h*0.25, this.state.size.h*0.75) + 'px'
-      },
-      time: this.state.time + 6
-    });
 
-    if(this.state.time > 95 && this.state.time <= 220 && !this.state.vibrating)
+    this.setState({ time: this.state.time + 1 });
+
+    if(this.state.time % 6 == 0)
+      this.setState({
+        style: {
+          left: getRandom(this.state.size.w*0.25, this.state.size.w*0.75) + 'px',
+          top: getRandom(this.state.size.h*0.25, this.state.size.h*0.75) + 'px'
+        }
+      });
+
+    if(this.state.time >= 93 && this.state.time <= 212 && !this.state.vibrating)
       this.setState({
         className: 'floaty vibrate',
         vibrating: true
       });
-    else if(this.state.time > 220 && this.state.time <= 252 && this.state.vibrating)
+    else if(this.state.time > 212 && this.state.time <= 257 && this.state.vibrating)
       this.setState({
         className: 'floaty pulse',
         vibrating: false
       });
-    else if(this.state.time > 252 && this.state.time <= 378 && !this.state.vibrating)
+    else if(this.state.time > 257 && this.state.time <= 378 && !this.state.vibrating)
       this.setState({
         className: 'floaty vibrate',
         vibrating: true
@@ -144,7 +147,7 @@ var Floaty = React.createClass({
       });
   },
   componentDidMount: function() {
-    this.setInterval(this.tick, 6000);
+    this.setInterval(this.tick, 1000);
   },
   render: function () {
     return(
@@ -155,14 +158,31 @@ var Floaty = React.createClass({
   }
 });
 
-// Rdio Player
-var Rdio = React.createClass({
-  componentDidMount: function() {
-    $('iframe').contents().find('.background').remove();
-  },
+// Rdio Embed Player
+var RdioEmbed = React.createClass({
   render: function () {
     return(
       <iframe width="400" height="36" src="https://rd.io/i/QVggWjfKlhY" frameborder="0" className="rdio"></iframe>
+    );
+  }
+});
+
+// Rdio API Player
+var Rdio = React.createClass({
+  componentDidMount: function() {
+    // this is a valid playback token for localhost.
+      // but you should go get your own for your own domain.
+    $(this.refs.rdioApi.getDOMNode()).rdio('GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=');
+    // Play track when ready
+    $(this.refs.rdioApi.getDOMNode()).bind('ready.rdio',
+      function() {
+        console.log($(this));
+        $(this).rdio().play('t9815127');
+      });
+  },
+  render: function () {
+    return(
+      <div ref="rdioApi"></div>
     );
   }
 });
@@ -197,6 +217,9 @@ var JamieXX = React.createClass({
     		className={this.state.jamieClass}>
     			<Floaty/>
           <Rdio/>
+          <div className="rdio">
+          <div className="title">Far Nearer &mdash; Jamie XX</div><div className="logo"></div>
+          </div>
     	</div>
     );
   }
