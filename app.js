@@ -172,7 +172,7 @@ var Rdio = React.createClass({
   componentDidMount: function() {
     // this is a valid playback token for localhost.
       // but you should go get your own for your own domain.
-    $(this.refs.rdioApi.getDOMNode()).rdio('GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=');
+    $(this.refs.rdioApi.getDOMNode()).rdio('GBdTyEVd_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbndpbmtlcnZzYmVja3MuZ2l0aHViLmlv_TlR2tYRPrwnVS2OHsJy6Q==');
     // Play track when ready
     $(this.refs.rdioApi.getDOMNode()).bind('ready.rdio',
       function() {
