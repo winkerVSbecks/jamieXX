@@ -17,6 +17,10 @@ body,
           transition: background cubic-bezier(.6,.02,.99,.4) 1s;
 }
 
+
+/*
+ * Rdio
+ */
 .rdio {
 	position: absolute;
   width: 100%;
@@ -52,6 +56,10 @@ body,
           background-size: 44px 20px;
 }
 
+
+/*
+ * Floaty the rectangle
+ */
 .floaty {
 	position: absolute;
 	width: 320px;
@@ -68,6 +76,9 @@ body,
 											top ease-in-out 4s;
 }
 
+/*
+ * Animation Classes
+ */
 .float {
 	-webkit-animation-name: Floating;
      -moz-animation-name: Floating;
@@ -115,7 +126,7 @@ body,
 
 
 /*
- * Albums
+ * Album Specific Styling
  */
 .far-nearer-beat-for {
 	background: #FF28F5;
@@ -281,93 +292,93 @@ body,
 }
 @-webkit-keyframes Vibration {
   0%  { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						             rotateZ(-45deg)
+  						             skew(-1deg, 1deg);
   }
   10%  { -webkit-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(1deg, -1deg);
+  						              rotateZ(-45deg)
+  						              skew(1deg, -1deg);
   }
   20%  { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						              rotateZ(-45deg)
+  						              skew(-1deg, 1deg);
   }
   30%  { -webkit-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(1deg, -1deg);
+  						              rotateZ(-45deg)
+  						              skew(1deg, -1deg);
   }
   40%  { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						              rotateZ(-45deg)
+  						              skew(-1deg, 1deg);
   }
   50%  { -webkit-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(1deg, -1deg);
+  						              rotateZ(-45deg)
+  						              skew(1deg, -1deg);
   }
   60%  { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						              rotateZ(-45deg)
+  						              skew(-1deg, 1deg);
   }
   70%  { -webkit-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(1deg, -1deg);
+  						              rotateZ(-45deg)
+  						              skew(1deg, -1deg);
   }
   80%  { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						              rotateZ(-45deg)
+  						              skew(-1deg, 1deg);
   }
   90%  { -webkit-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(1deg, -1deg);
+  						              rotateZ(-45deg)
+  						              skew(1deg, -1deg);
   }
   100% { -webkit-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(-1deg, 1deg);
+  						              rotateZ(-45deg)
+  						              skew(-1deg, 1deg);
   }
 }
 @-moz-keyframes Vibration {
 	0%   { -moz-transform: translate(1px, 1px)
-							 rotateZ(-45deg)
-							 skew(5deg, 5deg);
+							           rotateZ(-45deg)
+							           skew(5deg, 5deg);
 	}
   10%  { -moz-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   20%  { -moz-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   30%  { -moz-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   40%  { -moz-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   50%  { -moz-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   60%  { -moz-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   70%  { -moz-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   80%  { -moz-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   90%  { -moz-transform: translate(-1px, -1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
   100% { -moz-transform: translate(1px, 1px)
-  						 rotateZ(-45deg)
-  						 skew(5deg, 5deg);
+  						           rotateZ(-45deg)
+  						           skew(5deg, 5deg);
   }
 }

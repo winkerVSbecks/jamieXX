@@ -19,7 +19,7 @@ var SetIntervalMixin = {
   }
 };
 
-// Floaty rectangle
+// Floaty but draggable rectangle (not using anymore)
 var Draggable = React.createClass({
   getDefaultProps: function () {
     return {
@@ -158,7 +158,7 @@ var Floaty = React.createClass({
   }
 });
 
-// Rdio Embed Player
+// Rdio Embed Player (not using anymore)
 var RdioEmbed = React.createClass({
   render: function () {
     return(
@@ -170,8 +170,7 @@ var RdioEmbed = React.createClass({
 // Rdio API Player
 var Rdio = React.createClass({
   componentDidMount: function() {
-    // this is a valid playback token for localhost.
-      // but you should go get your own for your own domain.
+    // playback token
     $(this.refs.rdioApi.getDOMNode()).rdio('GBdTyEVd_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbndpbmtlcnZzYmVja3MuZ2l0aHViLmlv_TlR2tYRPrwnVS2OHsJy6Q==');
     // Play track when ready
     $(this.refs.rdioApi.getDOMNode()).bind('ready.rdio',
